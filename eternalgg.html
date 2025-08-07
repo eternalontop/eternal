@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eternal</title>
+  <link rel="icon" href="images/star.png" type="image/x-icon" />
+  <link rel="icon" type="images/logo2.png" href="images/logo.ico"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="css/general.css"/>
+  <link rel="stylesheet" href="css/startEternal.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+
+<body class="text-white overflow-x-hidden">
+
+  <!--music screen -->
+  <div id="welcome-screen" class="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-purple-300">Este sitio contiene música de fondo</h1>
+    <p class="mb-6 text-gray-400">Puedes entrar con o sin sonido</p>
+    <div class="space-x-4">
+      <button id="enter-with-music" class="btn-primary">Ignorar</button>
+      <button id="enter-silently" class="btn-secondary">Entrar en silencio</button>
+    </div>
+  </div>
+
+  <audio id="background-music" loop src="assets/mine1nonly.mp3" preload="auto"></audio>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 shadow-md p-4 flex items-center justify-between navbar-bg">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo2.png" alt="Logo" class="w-8 h-8 rounded-full">
+      <span class="logo-title">Touching Eternity</span>
+    </div>
+    <nav class="flex gap-8">
+      <a href="homeEternal.html" class="nav-link-section">Home</a>
+      <a href="repository.html" class="nav-link-section">Repositorios</a>
+      <a href="https://google.com" class="nav-link-section">Socials</a>
+      <a href="https://google.com" class="nav-link-section">Contact Me</a>
+    </nav>
+    <button id="open-settings" class="settings-btn" aria-label="Configuración">
+      <i class="fas fa-cog"></i>
+    </button>
+  </header>
+
+  <!-- Modal Configuración Mejorado -->
+  <div id="settings-panel" class="settings-modal">
+    <div class="settings-modal-content">
+      <h2>Configuración</h2>
+      <button id="toggle-music" class="modal-btn"><i class="fas fa-music"></i> Música</button>
+      <button id="toggle-theme" class="modal-btn"><i class="fas fa-moon"></i> Modo Oscuro</button>
+      <button id="close-settings" class="modal-btn close"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main class="text-center flex flex-col items-center justify-center min-h-screen p-6 space-y-8">
+    <div class="mt-10" data-aos="fade-up">
+      <h1 class="hero-title">Eternal</h1>
+      <h2 class="text-purple-400">@savegerder</h2>
+    </div>
+    <p id="subtitles" class="italic text-purple-300 text-lg" data-aos="fade-up" data-aos-delay="200"></p>
+    <div class="quote-box" data-aos="fade-up" data-aos-delay="400">
+      <p class="quote-text" id="quote-text">Loading quote...</p>
+      <p class="quote-source" id="quote-source"></p>
+    </div>
+    <div class="grid-buttons mt-10" data-aos="zoom-in-up" data-aos-delay="600">
+      <a href="homeEternal.html" class="button"><i class="fas fa-home"></i> Home</a>
+      <a href="repository.html" class="button"><i class="fab fa-github"></i> Repositorios</a>
+      <a href="https://google.com" class="button"><i class="fas fa-users"></i> Socials</a>
+      <a href="https://google.com" class="button"><i class="fas fa-envelope"></i> Contact Me</a>
+    </div>
+
+    <!-- Secciones explicativas interactivas -->
+    <div class="sections-explain grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 w-full max-w-3xl mx-auto">
+      <div class="section-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="section-icon"><i class="fas fa-home"></i></div>
+        <h3>Home</h3>
+        <p>Descubre quién soy, mi historia y el propósito de este sitio. Aquí encontrarás información sobre mi y mis intereses.</p>
+      </div>
+      <div class="section-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="section-icon"><i class="fab fa-github"></i></div>
+        <h3>Repositorios</h3>
+        <p>Explora mis proyectos de código abierto y colaboraciones en GitHub. Recuerda siempre dar creditos!</p>
+      </div>
+      <div class="section-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="section-icon"><i class="fas fa-users"></i></div>
+        <h3>Socials</h3>
+        <p>Conecta conmigo en atraves de Instagram, Discord, Twitter y mas!</p>
+      </div>
+      <div class="section-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="section-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Contact Me</h3>
+        <p>¿Tienes dudas o quisieras colaborar? ¡Envíame un mensaje!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-20">
+    <div class="footer-content text-center">
+      <p class="text-sm text-gray-400">v1.0.0 | Made with <span class="text-red-400">♥</span> by @savegerder</p>
+      <p class="text-xs text-gray-500">© 2025 Eternal. Copyright Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+  <script>AOS.init();</script>
+  <script src="js/musicControl.js"></script>
+  <script src="js/themeControl.js"></script>
+  <script src="js/eternallogan.js"></script>
+  <script src="js/quoteBible.js"></script>
+  <script src="js/settingsPanel.js"></script>
+</body>
+</html>

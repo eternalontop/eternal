@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Repositorios | Eternal</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/homeStyle.css" />
+  <link rel="stylesheet" href="css/repoStyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700|Montserrat:600&display=swap" rel="stylesheet">
+</head>
+<body class="text-white overflow-x-hidden">
+
+  <audio id="background-music" loop src="assets/fridaytheme.mp3" preload="auto"></audio>
+
+  <a href="eternalgg.html" class="back-home-btn" title="Volver a la página principal">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <header class="sticky top-0 z-40 shadow-md p-4 navbar-bg">
+    <div class="navbar-content">
+      <img src="images/logo.ico" alt="Logo" class="logo-img">
+      <span class="logo-title">Touching Eternity</span>
+      <span class="home-section-label">Repositorios</span>
+      <button id="open-settings" class="settings-btn ml-auto" aria-label="Configuración">
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="settings-panel" class="settings-modal">
+    <div class="settings-modal-content">
+      <h2>Configuración</h2>
+      <button id="toggle-music" class="modal-btn"><span class="music-icon-wrap"><i class="fas fa-music"></i></span> Música</button>
+      <button id="toggle-theme" class="modal-btn"><i class="fas fa-moon"></i> Modo Oscuro</button>
+      <button id="close-settings" class="modal-btn close"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="repos-section" data-aos="fade-up">
+      <h2 class="gradient-title">Mis Repositorios</h2>
+      <div id="repos-list" class="repos-list">
+        <!-- Aquí se insertan los cards de repositorios por JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section mt-20">
+    <div class="footer-content text-center">
+      <p class="text-sm text-gray-400">v1.0.0 | Made with <span class="text-red-400">♥</span> by @savegerder</p>
+      <p class="text-xs text-gray-500">© 2025 Eternal. Copyright Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/settingsPanel.js"></script>
+  <script src="js/repositories.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ once: false, duration: 900, offset: 80 });
+  </script>
+</body>
+</html>

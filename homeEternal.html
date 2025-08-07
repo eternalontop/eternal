@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Eternal</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/homeStyle.css" />
+  <link rel="stylesheet" href="css/startEternal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700|Montserrat:600&display=swap" rel="stylesheet">
+</head>
+<body class="text-white overflow-x-hidden">
+
+  <audio id="background-music" loop src="assets/fridaytheme.mp3" preload="auto"></audio>
+
+  <a href="eternalgg.html" class="back-home-btn" title="Volver a la página principal">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <header class="sticky top-0 z-40 shadow-md p-4 navbar-bg">
+    <div class="navbar-content">
+      <img src="images/logo.ico" alt="Logo" class="logo-img">
+      <span class="logo-title">Touching Eternity</span>
+      <span class="home-section-label">Home</span>
+      <button id="open-settings" class="settings-btn ml-auto" aria-label="Configuración">
+        <i class="fas fa-cog"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="settings-panel" class="settings-modal">
+    <div class="settings-modal-content">
+      <h2>Configuración</h2>
+      <button id="toggle-music" class="modal-btn"><span class="music-icon-wrap"><i class="fas fa-music"></i></span> Música</button>
+      <button id="toggle-theme" class="modal-btn"><i class="fas fa-moon"></i> Modo Oscuro</button>
+      <button id="close-settings" class="modal-btn close"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <section class="profile-card" id="profile-card" data-aos="fade-up">
+      <div class="avatar-container">
+        <img id="avatar" class="avatar" src="" alt="Avatar de Discord" />
+        <div id="status-dot" class="status-dot" title="Estado"></div>
+      </div>
+      <div class="info-section">
+        <div class="text-content">
+          <span class="profile-main-title">savegerder</span>
+          <span class="profile-tag">@touchingeternity</span>
+          <p id="description" class="profile-desc">Touching the eternity of your lips. hago cosas por aburrimiento</p>
+          <p id="subdescription" class="profile-desc">Always Improving, Always Want Us</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me" class="about-me-section flex flex-row items-center justify-center gap-10" data-aos="fade-up">
+      <div class="about-text">
+        <h2 class="gradient-title">Sobre mí</h2>
+        <p class="description poem about-big">
+          Soy un adolescente apasionado por la tecnología, la programación y la ciberseguridad. <br>
+          Desde que descubrí el mundo de la programación en 2023, supe que quería dedicarme a esto de forma seria.<br>
+          Me gusta aprender por mi cuenta, experimentar con nuevas herramientas y siempre buscar cómo mejorar mis habilidades.<br>
+          <br>
+          Mi objetivo a largo plazo es convertirme en un desarrollador web profesional, con conocimientos sólidos en ciberseguridad y ethical hacking.<br>
+          Me interesa no solo crear proyectos funcionales, sino también protegerlos y entender cómo funcionan en profundidad.<br>
+          Soy una persona autodidacta, curiosa y con mentalidad emprendedora. <br>
+          Siempre estoy buscando nuevos retos, oportunidades para aprender y maneras de crecer dentro del mundo tecnológico.
+        </p>
+      </div>
+      <div class="about-image about-image-big">
+        <img src="https://i.pinimg.com/736x/da/90/9a/da909a8e5bbacd83c82222006ebf7321.jpg" alt="Imagen About Me" />
+      </div>
+    </section>
+
+    <section class="skills-section" data-aos="fade-up">
+      <h2 class="skills-title gradient-title">Habilidades</h2>
+      <div class="skills-list">
+        <div class="skill-bar" data-skill="Creatividad" data-value="85"></div>
+        <div class="skill-bar" data-skill="Trabajo en Equipo" data-value="96"></div>
+        <div class="skill-bar" data-skill="Gestion de Tiempo" data-value="40"></div>
+        <div class="skill-bar" data-skill="Comunicación" data-value="72"></div>
+        <div class="skill-bar" data-skill="Aprendizaje Rápido" data-value="95"></div>
+        <div class="skill-bar" data-skill="Idiomas (Inglés)" data-value="90"></div>
+      </div>
+      <div class="skills-languages" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="gradient-title">Lenguajes de Programacion </h3>
+        <div class="languages-list">
+          <span class="lang"><i class="fab fa-html5" style="color:#e44d26"></i> HTML</span>
+          <span class="lang"><i class="fab fa-css3-alt" style="color:#1572b6"></i> CSS</span>
+          <span class="lang"><i class="fab fa-js" style="color:#f7df1e"></i> JS</span>
+          <span class="lang"><i class="fab fa-python" style="color:#3776ab"></i> Python</span>
+          <span class="lang"><i class="fab fa-google" style="color:#00b4ab"></i> Dart</span>
+          <span class="lang"><i class="fas fa-terminal" style="color:#4d4d4d"></i> Batch</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" data-aos="fade-up">
+      <h2 class="gradient-title">Servicios</h2>
+      <div class="services-list">
+        <div class="service-card" data-service="webdev">
+          <img src="images/webdev.png" alt="Web" class="service-img">
+          <div class="service-info">
+            <h3>Desarrollo Web</h3>
+            <p>Diseño y desarrollo de páginas web modernas, responsivas y optimizadas.</p>
+            <span class="service-price">$50 USD / sitio</span>
+          </div>
+        </div>
+        <div class="service-card" data-service="uiux">
+          <img src="images/uiux.png" alt="UI/UX" class="service-img">
+          <div class="service-info">
+            <h3>Diseño UI/UX</h3>
+            <p>Interfaces atractivas y experiencia de usuario intuitiva para tus proyectos.</p>
+            <span class="service-price">$30 USD / diseño</span>
+          </div>
+        </div>
+        <div class="service-card" data-service="automation">
+          <img src="images/automation.png" alt="Automation" class="service-img">
+          <div class="service-info">
+            <h3>Automatización</h3>
+            <p>Scripts y herramientas para automatizar tareas y mejorar tu flujo de trabajo.</p>
+            <span class="service-price">$20 USD / script</span>
+          </div>
+        </div>
+        <div class="service-card" data-service="discord">
+          <img src="images/dcpreview.png" alt="Discord JS & PY" class="service-img">
+          <div class="service-info">
+            <h3>Discord JS & PY</h3>
+            <p>Bots personalizados para Discord usando JavaScript y Python. Automatiza, modera y potencia tu comunidad.</p>
+            <span class="service-price">$35 USD / bot</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="service-modal" class="service-modal">
+      <div class="service-modal-content">
+        <button class="service-modal-close" id="close-service-modal" title="Cerrar">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="service-modal-header">
+          <img id="service-modal-img" src="" alt="Servicio" class="service-modal-img">
+          <h2 id="service-modal-title"></h2>
+        </div>
+        <div class="service-modal-body">
+          <section>
+            <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+            <p id="service-modal-desc"></p>
+          </section>
+          <section>
+            <h3><i class="fas fa-list-check"></i> Condiciones</h3>
+            <ul id="service-modal-cond"></ul>
+          </section>
+          <section>
+            <h3><i class="fas fa-clock"></i> Tiempo</h3>
+            <div id="service-modal-time"></div>
+          </section>
+          <section>
+            <h3><i class="fas fa-money-bill-wave"></i> Pagos y Costo</h3>
+            <div id="service-modal-pay"></div>
+          </section>
+          <section>
+            <h3><i class="fas fa-photo-film"></i> Ejemplo</h3>
+            <div class="service-modal-media">
+              <div class="example-img-wrap">
+                <img id="service-modal-example-img" src="" alt="Ejemplo" style="max-width:180px; border-radius:1rem;box-shadow:0 0 12px #b26eff33;">
+                <button id="enlarge-img-btn" class="enlarge-img-btn" title="Ampliar"><i class="fas fa-expand"></i></button>
+              </div>
+              <video id="service-modal-video" controls style="max-width:260px; border-radius:1rem; margin-top:1rem;box-shadow:0 0 12px #b26eff33;">
+                <source src="" type="video/mp4">
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="img-enlarge-modal" class="img-enlarge-modal">
+      <span id="close-img-enlarge" class="close-img-enlarge"><i class="fas fa-times"></i></span>
+      <img id="img-enlarge-src" src="" alt="Imagen ampliada">
+    </div>
+
+  </main>
+
+  <footer class="footer-section mt-20">
+    <div class="footer-content text-center">
+      <p class="text-sm text-gray-400">v1.0.0 | Made with <span class="text-red-400">♥</span> by @savegerder</p>
+      <p class="text-xs text-gray-500">© 2025 Eternal. Copyright Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ once: false, duration: 900, offset: 80 });
+  </script>
+  <script src="js/discordProfile.js"></script>
+  <script src="js/settingsPanel.js"></script>
+  <script src="js/servicesModal.js"></script>
+  <script>
+    function animateSkillBars() {
+      document.querySelectorAll('.skill-bar').forEach(bar => {
+        const value = bar.getAttribute('data-value');
+        const skill = bar.getAttribute('data-skill');
+        bar.innerHTML = `<span class="skill-label">${skill}</span>
+          <div class="skill-bar-bg"><div class="skill-bar-fill"></div></div>
+          <span class="skill-value">${value}%</span>`;
+        setTimeout(() => {
+          bar.querySelector('.skill-bar-fill').style.width = value + '%';
+        }, 400);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', animateSkillBars);
+    document.addEventListener('aos:in', e => {
+      if (e.detail.classList.contains('skills-section')) animateSkillBars();
+    });
+
+    // Profile card 
+    const card = document.getElementById('profile-card');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width/2;
+      const y = e.clientY - rect.top - rect.height/2;
+      card.style.transform = `perspective(900px) rotateY(${x/18}deg) rotateX(${-y/18}deg) scale(1.04)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  </script>
+</body>
+</html>
